@@ -17,6 +17,14 @@
         <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
       <% end %>
 
+      <% if user_signed_in? %>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      <% end %>
+
     <%= yield %>
   </body>
 
