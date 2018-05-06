@@ -23,15 +23,23 @@
                 <ul class="nav navbar-nav navbar-right">
                   <li><%= link_to 'Sign Up', new_user_registration_path %></li>
                   <li><%= link_to 'Sign In', new_user_session_path %></li>
-                </ul>
-                     
+                </ul>    
               <% end %>
+            </nav>
+          </div>
+        </div>
+      </header>
 
-      <% flash.each do |name, msg| %>
-      <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
-      <% end %>
-
-    <%= yield %>
+      <div id="main" class="container">
+        <% flash.each do |name, msg| %>
+        <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
+        <% end %>
+      
+        <div id="container" class="col-md-9 center-block">
+          <%= yield %>
+        </div>
+      </div>
+      
   </body>
 
 </html>
