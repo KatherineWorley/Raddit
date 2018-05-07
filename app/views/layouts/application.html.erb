@@ -29,15 +29,14 @@
         </div>
       </header>
 
-      <div id="main" class="container">
+      <div id="main_content" class="container">
         <% flash.each do |name, msg| %>
         <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
         <% end %>
       
-        <div id="container" class="col-md-9 center-block">
+        <div id="content" class="col-md-9 center-block">
           <%= yield %>
         </div>
       </div>
-
 </body>
 </html>
