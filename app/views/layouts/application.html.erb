@@ -2,11 +2,10 @@
 <html>
   <head>
     <title>Raddit</title>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track'  => true %>
     <%= csrf_meta_tags %>
   </head>
-
   <body>
     <header class="navbar navbar-default" role="navigation">
       <div class="navbar-inner">
@@ -20,7 +19,7 @@
                   <li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
                 </ul>
                 <% else %>
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav pull-right">
                   <li><%= link_to 'Sign Up', new_user_registration_path %></li>
                   <li><%= link_to 'Sign In', new_user_session_path %></li>
                 </ul>    
