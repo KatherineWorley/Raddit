@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   # devise_for :installs
-  
+
   resources :links do
   	member do
   		put "like", to: "links#upvote"
@@ -10,7 +10,5 @@ Rails.application.routes.draw do
   end
   
   root to: "links#index"
-
-
   
 end
