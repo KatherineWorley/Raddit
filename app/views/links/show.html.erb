@@ -15,14 +15,14 @@
 	<% end %>
 
 <div class="btn-group pull-right">
-	     <%= link_to like_link_path(Link), method: :put, class: "btn btn-defalt btn-sm" do %>
+	     <%= link_to like_link_path(@Link), method: :put, class: "btn btn-defalt btn-sm" do %>
 	     	<span class="glyphicon glyphicon-chevron-up"></span>
 	      Upvote
-	      <%= Link.get_upvotes.size %>
+	      <%= @Link.get_upvotes.size %>
       <% end %>
-      <%= link_to dislike_link_path(Link), method: :put, class: "btn btn-defalt btn-sm" do %>
+      <%= link_to dislike_link_path(@Link), method: :put, class: "btn btn-defalt btn-sm" do %>
 	      <span class="glyphicon glyphicon-chevron-down"></span>
 	      Downvote
-	      <%= Link.get_downvotes.size %>
+	      <%= @Link.get_downvotes.size %>
       <% end %>
 </div>

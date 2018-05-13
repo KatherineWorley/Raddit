@@ -7,15 +7,15 @@
 
     <div class="btn-group">
        <a class="btn btn-defalt btn-sm" href="<%= "http://#{link.url}" %>">Visit Link</a>	
-	     <%= link_to like_link_path(link), method: :put, class: "btn btn-defalt btn-sm" do %>
+	     <%= link_to like_link_path(@link), method: :put, class: "btn btn-defalt btn-sm" do %>
 	     	<span class="glyphicon glyphicon-chevron-up"></span>
 	      Upvote
-	      <%= link.get_upvotes.size %>
+	      <%= @link.get_upvotes.size %>
       <% end %>
-      <%= link_to dislike_link_path(link), method: :put, class: "btn btn-defalt btn-sm" do %>
+      <%= link_to dislike_link_path(@link), method: :put, class: "btn btn-defalt btn-sm" do %>
 	      <span class="glyphicon glyphicon-chevron-down"></span>
 	      Downvote
-	      <%= link.get_downvotes.size %>
+	      <%= @link.get_downvotes.size %>
       <% end %>
   </div>
 </div>
