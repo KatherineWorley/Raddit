@@ -9,7 +9,7 @@
 
   <div class="form-group">
     <%= f.label :password %>
-    <%= f.password_field :password, autocomplete: "off" %>
+    <%= f.password_field :password, class: "form-control", required: true %>
   </div>
 
   <div class="check_box">
@@ -18,8 +18,9 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "Sign Up", class: "btn btn-lg btn-primary" %>
   </div>
+
 <% end %>
 
 <%= render "devise/shared/links" %>
