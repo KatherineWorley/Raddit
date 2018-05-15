@@ -1,0 +1,7 @@
+<%= div_for(comment) do %>
+<div class="comments_wrapper clearfix">
+	<div class="pull-left">
+		<p><small>Submitted <strong><%= time_ago_in_worlds(comment.created_at) %></strong>by <%= comment.user.email %></small></p>
+	</div>
+	
+</div>
