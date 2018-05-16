@@ -15,37 +15,30 @@
 	<% end %>
 
 <div class="btn-group pull-right">
-	     <%= link_to like_link_path(@Link), method: :put, class: "btn btn-defalt btn-sm" do %>
+	     <%= link_to like_link_path(@link), method: :put, class: "btn btn-defalt btn-sm" do %>
 	     	<span class="glyphicon glyphicon-chevron-up"></span>
 	      Upvote
-	      <%= @Link.get_upvotes.size %>
+	      <%= @link.get_upvotes.size %>
       <% end %>
-      <%= link_to dislike_link_path(@Link), method: :put, class: "btn btn-defalt btn-sm" do %>
+      <%= link_to dislike_link_path(@link), method: :put, class: "btn btn-defalt btn-sm" do %>
 	      <span class="glyphicon glyphicon-chevron-down"></span>
 	      Downvote
-	      <%= @Link.get_downvotes.size %>
+	      <%= @link.get_downvotes.size %>
       <% end %>
 </div>
 
-
 <h3 class="comments_title">
-	<%= @Link.comments.count %> Comments
+	<%= @link.comments.count %> Comments
 </h3>
 
 <div id="comments">
 	<%= render :partial => @link.comments %>
 </div>
+
 <%= simple_form_for [@link, Comment.new] do |f| %>
 <div class="field">
 	<%= f.text_area :body, class: "form-control" %>
 </div>
 <br>
-<%= f.submit "Add Comment", class: "btn btn-primary"
+<%= f.submit "Add Comment", class: "btn btn-primary"%>
 <% end %>
-
-
-
-
-
-
-
